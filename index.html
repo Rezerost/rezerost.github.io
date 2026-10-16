@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tuvshintur Tumurchuluun — UX/UI Designer & Developer</title>
+  <meta name="description" content="UX/UI designer and fullstack developer from Ulaanbaatar. Web and mobile products, designed and built end to end.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+
+  <!-- Header: info strip + nav in one floating card -->
+  <header class="header">
+    <div class="strip">
+      <a href="mailto:Rezerost@proton.me">Rezerost@proton.me ↗</a>
+      <span class="hide-sm">Ulaanbaatar, Mongolia</span>
+      <span class="status"><i></i>Open to new opportunities</span>
+    </div>
+    <div class="nav">
+      <a class="brand" href="#home"><span>TUVSHINTUR<b>.</b></span><small>UX/UI &amp; FULLSTACK · 2026</small></a>
+      <nav class="links" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-dark" href="#contact">Contact <span class="btn-ico">↗</span></a>
+        <button class="icon-btn" id="themeToggle" aria-label="Switch light or dark mode">☾</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <div class="hero-top">
+          <p class="label"><span class="sq"></span>Design and code</p>
+          <p class="label muted">Portfolio / 2026</p>
+        </div>
+        <h1 class="name">TUVSHINTUR<br>TUMURCHULUUN<span class="accent">.</span></h1>
+        <p class="role">UX/UI Designer · Fullstack Developer</p>
+        <p class="lead">I design and build web and mobile products, from the first screens to the backend behind them.</p>
+        <div class="cta">
+          <a class="btn btn-dark" href="#work">View work <span class="btn-ico">↗</span></a>
+          <a class="btn btn-link" href="#contact">Contact ↗</a>
+        </div>
+        <dl class="stats">
+          <div><dt>4</dt><dd>products</dd></div>
+          <div><dt>2,000+</dt><dd>commits</dd></div>
+          <div><dt>470+</dt><dd>test files</dd></div>
+        </dl>
+        <a class="scroll-hint" href="#work"><span>↓</span>Scroll to see the work</a>
+      </div>
+
+      <div class="wall" aria-label="Project previews">
+        <div class="wall-col">
+          <div class="wall-track">
+            <button class="tile bg-sky" data-open="case-ecargo"><span class="m-browser"><i class="bar"></i><img src="img/ecargo-parcels.jpg" alt=""></span><span class="cap">Ecargo · Web</span></button>
+            <div class="tile color short bg-yellow"><span class="t-kick">DESIGN × CODE</span><span class="t-type">UX/UI</span></div>
+            <button class="tile bg-mint" data-open="case-nomady"><span class="m-phone"><img src="img/nomady-discover.jpg" alt=""></span><span class="cap">Nomady · Mobile</span></button>
+            <button class="tile bg-lilac" data-open="case-kino"><span class="m-browser"><i class="bar"></i><img src="img/stream-player-subs.jpg" alt=""></span><span class="cap">KinoUzyo · AI subtitles</span></button>
+          </div>
+        </div>
+        <div class="wall-col offset">
+          <div class="wall-track">
+            <button class="tile bg-sand" data-open="case-ecargo"><span class="m-phone"><img src="img/ecargo-pickup.jpg" alt=""></span><span class="cap">Ecargo · Pickup pass</span></button>
+            <button class="tile bg-peach" data-open="case-aiyda"><span class="m-browser"><i class="bar"></i><img src="img/aiyda-home.jpg" alt=""></span><span class="cap">Aiyda.store · Web</span></button>
+            <div class="tile color short bg-ink"><span class="t-kick">SCHOOL 42 · CORE</span><span class="t-number">42</span></div>
+            <button class="tile bg-sky" data-open="case-nomady"><span class="m-phone"><img src="img/nomady-route.jpg" alt=""></span><span class="cap">Nomady · Route maps</span></button>
+          </div>
+        </div>
+        <div class="wall-col">
+          <div class="wall-track">
+            <div class="tile color short bg-orange"><span class="t-kick">WEB · MOBILE · TV</span><span class="t-star">✦</span></div>
+            <button class="tile bg-lilac" data-open="case-kino"><span class="m-browser"><i class="bar"></i><img src="img/stream-home.jpg" alt=""></span><span class="cap">KinoUzyo · Home</span></button>
+            <button class="tile bg-rose" data-open="case-nomady"><span class="m-phone"><img src="img/nomady-guide.jpg" alt=""></span><span class="cap">Nomady · Guide</span></button>
+            <button class="tile bg-peach" data-open="case-aiyda"><span class="m-browser"><i class="bar"></i><img src="img/aiyda-product.jpg" alt=""></span><span class="cap">Aiyda.store · Product</span></button>
+          </div>
+        </div>
+        <button class="featured" data-open="case-nomady">
+          <img src="img/nomady-route.jpg" alt="">
+          <span><small>FEATURED PROJECT</small><b>Nomady</b><em>Travel guide · Mobile app</em></span>
+          <i>↗</i>
+        </button>
+        <button class="pause" id="wallPause" aria-pressed="false">❚❚ Pause</button>
+      </div>
+    </section>
+
+    <!-- TOOLS STRIP -->
+    <div class="tools" aria-label="Tools">
+      <div class="tools-track">
+        <span>Figma</span><span>TypeScript</span><span>React</span><span>React Native</span><span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Redis</span><span>Playwright</span><span>Kotlin</span><span>Claude</span>
+        <span aria-hidden="true">Figma</span><span aria-hidden="true">TypeScript</span><span aria-hidden="true">React</span><span aria-hidden="true">React Native</span><span aria-hidden="true">Next.js</span><span aria-hidden="true">Node.js</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">Supabase</span><span aria-hidden="true">Redis</span><span aria-hidden="true">Playwright</span><span aria-hidden="true">Kotlin</span><span aria-hidden="true">Claude</span>
+      </div>
+    </div>
+
+    <!-- WORK INTRO -->
+    <section class="section" id="work">
+      <div class="head-row">
+        <div>
+          <p class="label"><span class="num">01 /</span> Selected work</p>
+          <h2>From an idea<br>to a working product.</h2>
+        </div>
+        <p class="sub">A few projects I've designed and built, some on my own and some with the team at Nomax. Each one taught me something about the interface and about the system behind it.</p>
+      </div>
+
+      <div class="duo-card">
+        <div class="duo-text">
+          <p class="label">Designer who codes</p>
+          <h3>One idea.<br>Every layer.</h3>
+          <p class="sub">I enjoy working on both sides: figuring out what people need on screen, and building the APIs, payments and data that make it work.</p>
+          <div class="ai-row">
+            <span class="ai-ico">✦</span>
+            <div><b>AI-assisted workflow</b><small>Research → Design → Prototype → Code, with Claude</small></div>
+          </div>
+        </div>
+        <div class="skill-map" aria-label="What I work on">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M50 50 L18 22 M50 50 L50 10 M50 50 L84 24 M50 50 L16 78 M50 50 L50 92 M50 50 L86 76"/>
+          </svg>
+          <div class="sm-center"><span class="m-browser"><i class="bar"></i><img src="img/ecargo-parcels.jpg" alt=""></span><small>Interface → system</small></div>
+          <span class="node active" style="left:18%;top:22%">UX/UI</span>
+          <span class="node" style="left:50%;top:10%">Web</span>
+          <span class="node" style="left:84%;top:24%">Mobile</span>
+          <span class="node" style="left:16%;top:78%">Backend</span>
+          <span class="node" style="left:50%;top:92%">Payments</span>
+          <span class="node" style="left:86%;top:76%">AI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT GRID -->
+    <section class="section grid-section" aria-label="Projects">
+      <div class="head-row tight">
+        <h2 class="h3">Browse by type.</h2>
+        <p class="count"><b>4</b><small>projects</small></p>
+      </div>
+
+      <div class="filterbar" role="tablist" aria-label="Filter projects">
+        <button class="fchip active" data-filter="all">▦ All <span>4</span></button>
+        <button class="fchip" data-filter="web">▭ Web <span>3</span></button>
+        <button class="fchip" data-filter="mobile">▯ Mobile <span>2</span></button>
+        <button class="fchip" data-filter="backend">⌁ Backend <span>4</span></button>
+        <button class="fchip" data-filter="ai">✦ AI <span>1</span></button>
+      </div>
+
+      <div class="cards">
+        <article class="card featured-card" data-tags="mobile backend">
+          <button class="card-media bg-mint comp-p5" data-open="case-nomady" aria-label="View Nomady project">
+            <span class="badge">Mobile · Featured</span><span class="open">View project <i>↗</i></span>
+            <span class="m-phone"><img src="img/nomady-arrival.jpg" alt="Nomady Arrival planner" loading="lazy"></span>
+            <span class="m-phone"><img src="img/nomady-discover.jpg" alt="Nomady discover feed" loading="lazy"></span>
+            <span class="m-phone"><img src="img/nomady-route.jpg" alt="Nomady route map" loading="lazy"></span>
+            <span class="m-phone"><img src="img/nomady-map.jpg" alt="Nomady map" loading="lazy"></span>
+            <span class="m-phone"><img src="img/nomady-guide.jpg" alt="Nomady guide page" loading="lazy"></span>
+          </button>
+          <div class="card-body">
+            <div class="card-title"><h3>Nomady</h3><button class="try-btn" data-open="try-nomady"><i>▶</i>Try the app</button><span>2026</span></div>
+            <p>Travel guide and journey recorder for Mongolia</p>
+            <div class="ptags"><span>UX/UI design</span><span>Mobile app</span><span>Maps</span></div>
+          </div>
+        </article>
+        <article class="card" data-tags="web mobile backend">
+          <button class="card-media bg-sky comp-bp" data-open="case-ecargo" aria-label="View Ecargo project">
+            <span class="badge">Web + Mobile</span><span class="open">View project <i>↗</i></span>
+            <span class="m-browser"><i class="bar"></i><img src="img/ecargo-parcels.jpg" alt="Ecargo parcels dashboard" loading="lazy"></span>
+            <span class="m-phone"><img src="img/ecargo-pickup.jpg" alt="Ecargo pickup pass" loading="lazy"></span>
+          </button>
+          <div class="card-body">
+            <div class="card-title"><h3>Ecargo</h3><span>2026</span></div>
+            <p>Parcel tracking and pickup for China–Mongolia cargo</p>
+            <div class="ptags"><span>UX/UI design</span><span>Web &amp; mobile</span><span>Backend</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="web backend">
+          <button class="card-media bg-peach comp-bb" data-open="case-aiyda" aria-label="View Aiyda.store project">
+            <span class="badge">Web</span><span class="open">View project <i>↗</i></span>
+            <span class="m-browser"><i class="bar"></i><img src="img/aiyda-home.jpg" alt="Aiyda.store homepage" loading="lazy"></span>
+            <span class="m-browser"><i class="bar"></i><img src="img/aiyda-product.jpg" alt="Aiyda product page" loading="lazy"></span>
+          </button>
+          <div class="card-body">
+            <div class="card-title"><h3>Aiyda.store</h3><button class="try-btn" data-open="try-aiyda"><i>▶</i>Try it live</button><span>2025–26</span></div>
+            <p>Online store for products from Chinese sellers, priced in ₮</p>
+            <div class="ptags"><span>UX/UI design</span><span>Web</span><span>Automation</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="web mobile backend ai">
+          <button class="card-media bg-lilac comp-bb" data-open="case-kino" aria-label="View KinoUzyo project">
+            <span class="badge">Web + TV</span><span class="open">View project <i>↗</i></span>
+            <span class="m-browser"><i class="bar"></i><img src="img/stream-home.jpg" alt="KinoUzyo home page featuring Wednesday" loading="lazy"></span>
+            <span class="m-browser"><i class="bar"></i><img src="img/stream-player-subs.jpg" alt="KinoUzyo player with Mongolian AI subtitles" loading="lazy"></span>
+          </button>
+          <div class="card-body">
+            <div class="card-title"><h3>KinoUzyo</h3><button class="try-btn" data-open="try-kino" hidden><i>▶</i>Try it live</button><span>2026</span></div>
+            <p>Streaming platform with AI-made Mongolian subtitles</p>
+            <div class="ptags"><span>UX/UI design</span><span>Web · Android · TV</span><span>AI</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="head-row">
+        <p class="label"><span class="num">02 /</span> About me</p>
+        <p class="label muted">Ulaanbaatar, MN · UTC+8</p>
+      </div>
+      <div class="about">
+        <div class="about-intro">
+          <div class="hello">
+            <h2>Hi, I'm<br>Tuvshintur.</h2>
+            <img class="avatar" src="img/profile.jpg" alt="Tuvshintur at 42 Kuala Lumpur, holding a dinosaur skull wearing 42 sunglasses" loading="lazy">
+          </div>
+          <p class="sub">I'm a designer and developer from Ulaanbaatar. I like taking a product from a rough idea to something people actually use, and I learn something new on every project.</p>
+          <p class="sub">Right now I'm at Nomax, working on Ecargo and Nomady. I use Claude a lot for research, prototyping and code.</p>
+        </div>
+        <div class="about-side">
+          <div class="table">
+            <h4>Experience</h4>
+            <div class="row"><span>Now</span><div><b>Nomax</b><small>UX/UI designer &amp; fullstack developer</small></div></div>
+            <div class="row"><span>2025 — Now</span><div><b>Aiyda.store</b><small>Own project · design &amp; development</small></div></div>
+          </div>
+          <div class="table soft">
+            <h4>Education</h4>
+            <div class="row"><span>Core</span><div><b>School 42</b><small>Core programme, after the Piscine selection</small></div></div>
+            <div class="row"><span>2023</span><div><b>Mongol Aspiration</b><small>Graduated</small></div></div>
+          </div>
+          <div class="skills">
+            <h4>Skills &amp; tools</h4>
+            <div class="tags"><span>User flows</span><span>Wireframes</span><span>UI design</span><span>Design systems</span><span>Prototyping</span><span>Figma</span><span>TypeScript</span><span>React</span><span>React Native</span><span>Next.js</span><span>Node.js / Express</span><span>PostgreSQL</span><span>Supabase</span><span>Redis</span><span>Playwright</span><span>Kotlin</span><span>C</span><span>Claude</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="head-row">
+        <div>
+          <p class="label"><span class="num">03 /</span> How I work</p>
+          <h2>Clear goal.<br>Simple steps.</h2>
+        </div>
+        <p class="sub">The same four steps, whether it's a small screen or a whole system.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><h4>Understand</h4><p>Who it's for, what's hard for them today, and what a good result looks like.</p></div>
+        <div class="step"><span>02</span><h4>Design</h4><p>Flows and screens first, so the hard questions come up early.</p></div>
+        <div class="step"><span>03</span><h4>Build</h4><p>Data, API and interface together, so they fit each other.</p></div>
+        <div class="step"><span>04</span><h4>Test &amp; improve</h4><p>Tests, real feedback, and the next version.</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <p class="label"><span class="num">04 /</span> Next project</p>
+      <h2>Let's work<br>together<span class="accent">.</span></h2>
+      <p class="sub">If you have a role or a project where I could help, I'd be glad to hear from you.</p>
+      <div class="contact-links">
+        <a href="mailto:Rezerost@proton.me"><small>Email</small>Rezerost@proton.me<i>↗</i></a>
+        <a href="https://github.com/Rezerost" target="_blank" rel="noopener"><small>GitHub</small>Rezerost<i>↗</i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Tuvshintur Tumurchuluun</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <!-- CASE STUDIES (opened from the cards) -->
+  <dialog class="case" id="case-ecargo" aria-labelledby="t-ecargo">
+    <button class="close" data-close aria-label="Close">✕</button>
+    <header class="case-head bg-sky">
+      <p class="label">Logistics · 2026 · Nomax</p>
+      <h2 id="t-ecargo">Ecargo</h2>
+      <p class="tagline">A system for tracking parcels from China to Mongolia.</p>
+      <div class="case-meta"><span class="status-pill">Deployed · launching soon</span><span>Customer, warehouse and admin apps</span></div>
+    </header>
+    <div class="case-shots two">
+      <span class="m-browser"><i class="bar"></i><img src="img/ecargo-parcels.jpg" alt="Ecargo parcels dashboard with payment summary" loading="lazy"></span>
+      <span class="m-browser"><i class="bar"></i><img src="img/ecargo-landing.jpg" alt="Ecargo landing page" loading="lazy"></span>
+    </div>
+    <div class="case-body">
+      <div>
+        <h4>The problem</h4>
+        <p>People order from Taobao, ship to a warehouse in Erlian, and parcels are trucked to Ulaanbaatar for pickup. Many smaller cargo companies still track parcels in spreadsheets, so customers often have to call to find out where their parcel is.</p>
+        <h4>What I worked on</h4>
+        <p>Four apps on one API. Customers get an address in China, follow each parcel, pay online and show a pickup code. Warehouse staff weigh, photograph, label and load parcels. Admins manage prices, branches, claims and staff.</p>
+      </div>
+      <div>
+        <h4>Interesting problems</h4>
+        <ul class="points">
+          <li><b>Parcel status rules.</b> Every scan goes through one check that knows who is scanning and where. I added it after a mistyped scan once moved the wrong parcel.</li>
+          <li><b>Handling money carefully.</b> Exact tugrik rounding, logged price corrections, verified payment webhooks, and a job that catches payments whose confirmation got lost.</li>
+          <li><b>An audit log that stays intact.</b> The database only allows adding entries, and personal details are masked.</li>
+          <li><b>Warehouse hardware.</b> Thermal labels and receipts, and a web app that still works from inside China.</li>
+        </ul>
+      </div>
+    </div>
+    <ol class="flow"><li>Pre-alert</li><li>Intake in Erlian</li><li>Truck to UB</li><li>Ready at branch</li><li>Pay online</li><li>Pickup by code</li></ol>
+    <dl class="numbers">
+      <div><dt>4</dt><dd>apps</dd></div>
+      <div><dt>~226</dt><dd>API endpoints</dd></div>
+      <div><dt>44</dt><dd>data models</dd></div>
+      <div><dt>369</dt><dd>test files</dd></div>
+    </dl>
+    <div class="tags"><span>Next.js</span><span>Express</span><span>Prisma / Postgres</span><span>Redis</span><span>Expo</span><span>Playwright</span></div>
+  </dialog>
+
+  <dialog class="case" id="case-aiyda" aria-labelledby="t-aiyda">
+    <button class="close" data-close aria-label="Close">✕</button>
+    <header class="case-head bg-peach">
+      <p class="label">E-commerce · 2025 → now</p>
+      <h2 id="t-aiyda">Aiyda.store</h2>
+      <p class="tagline">Shopping from Chinese sellers, in tugrik.</p>
+      <div class="case-meta"><span class="status-pill live">Live</span><span>My own project</span><a href="https://aiyda.store" target="_blank" rel="noopener">aiyda.store ↗</a><button class="try-btn" data-open="try-aiyda"><i>▶</i>Try it live</button></div>
+    </header>
+    <div class="case-shots two">
+      <span class="m-browser"><i class="bar"></i><img src="img/aiyda-home.jpg" alt="Aiyda.store homepage" loading="lazy"></span>
+      <span class="m-browser"><i class="bar"></i><img src="img/aiyda-product.jpg" alt="Aiyda product page for a Nikon camera" loading="lazy"></span>
+    </div>
+    <div class="case-body">
+      <div>
+        <h4>The problem</h4>
+        <p>Many people in Mongolia buy from Taobao, Weidian and Xianyu, but those sites are in Chinese, priced in yuan and don't ship here. Buying usually means messaging a middleman and hoping for the best.</p>
+        <h4>What I worked on</h4>
+        <p>My first long-term project. An online store with 8,000+ products from Chinese sellers, priced in tugrik. After a customer pays, a bot places the order on the Chinese site with the size and colour they picked, and follows it until it reaches their cargo company.</p>
+      </div>
+      <div>
+        <h4>Interesting problems</h4>
+        <ul class="points">
+          <li><b>An ordering bot.</b> A Playwright service buys the exact item variant on Taobao or Weidian. Anything it can't finish goes to a list for a person to check.</li>
+          <li><b>Careful stock checks.</b> A product is only removed when several sources agree it's gone. I added this after a provider error once removed 47 products by mistake.</li>
+          <li><b>Safe payments.</b> Payment webhooks are verified and can only move an order one step forward, so a repeated message does no harm.</li>
+          <li><b>Search.</b> Fuzzy search across products, sellers and brands, with cached counts to keep pages fast.</li>
+        </ul>
+      </div>
+    </div>
+    <ol class="flow"><li>Customer pays in ₮</li><li>Price checked again</li><li>Bot orders in China</li><li>Tracking synced</li><li>Arrives at their cargo</li></ol>
+    <dl class="numbers">
+      <div><dt>8,036</dt><dd>products</dd></div>
+      <div><dt>187</dt><dd>database migrations</dd></div>
+      <div><dt>14</dt><dd>admin tools</dd></div>
+      <div><dt>8</dt><dd>Edge Functions</dd></div>
+    </dl>
+    <div class="tags"><span>React</span><span>TypeScript</span><span>Supabase / Postgres</span><span>Playwright</span><span>Tailwind</span></div>
+  </dialog>
+
+  <dialog class="case" id="case-kino" aria-labelledby="t-kino">
+    <button class="close" data-close aria-label="Close">✕</button>
+    <header class="case-head bg-lilac">
+      <p class="label">Media streaming · 2026</p>
+      <h2 id="t-kino">KinoUzyo</h2>
+      <p class="tagline">A streaming platform for a small private group, with Mongolian subtitles made by AI.</p>
+      <div class="case-meta"><span class="status-pill live">Deployed · invite only</span><span>Web, Android phone and Android TV</span><button class="try-btn" data-open="try-kino" hidden><i>▶</i>Try it live</button></div>
+    </header>
+    <div class="case-shots one">
+      <span class="m-browser"><i class="bar"></i><img src="img/stream-home.jpg" alt="KinoUzyo home page featuring Wednesday" loading="lazy"></span>
+    </div>
+    <div class="case-shots three">
+      <span class="m-browser"><i class="bar"></i><img src="img/stream-player-subs.jpg" alt="KinoUzyo player with AI-translated Mongolian subtitles" loading="lazy"></span>
+      <span class="m-browser"><i class="bar"></i><img src="img/stream-detail.jpg" alt="KinoUzyo title page" loading="lazy"></span>
+      <span class="m-browser"><i class="bar"></i><img src="img/stream-player-panel.jpg" alt="Subtitle panel translating into Mongolian" loading="lazy"></span>
+    </div>
+    <div class="case-body">
+      <div>
+        <h4>The idea</h4>
+        <p>A Netflix-style experience in Mongolian: browse movies, series, anime and K-drama, press play, and watch on a browser, phone or TV without downloading the file first.</p>
+        <h4>What I worked on</h4>
+        <p>Three backend services, a Next.js web app, and Android phone and TV apps. Resume across devices, a play queue, saved quality and subtitle settings, AI translation of English subtitles into Mongolian, and using your phone as a TV remote.</p>
+      </div>
+      <div>
+        <h4>Interesting problems</h4>
+        <ul class="points">
+          <li><b>Starting playback early.</b> The video is converted to streamable chunks while it's still arriving, with a fallback if that fails.</li>
+          <li><b>Mongolian subtitles with AI.</b> English subtitle tracks are extracted and translated, and the Mongolian track shows up in the player once it's ready.</li>
+          <li><b>Finding the right episode</b> inside large season packs, including anime seasons split into parts.</li>
+          <li><b>Switching sources mid-episode</b> while the current one keeps playing, then resuming at the same second.</li>
+        </ul>
+      </div>
+    </div>
+    <dl class="numbers">
+      <div><dt>3</dt><dd>platforms</dd></div>
+      <div><dt>3</dt><dd>backend services</dd></div>
+      <div><dt>15</dt><dd>playback session states</dd></div>
+      <div><dt>55</dt><dd>test files</dd></div>
+    </dl>
+    <div class="tags"><span>Node / Express</span><span>Prisma / Postgres</span><span>BullMQ / Redis</span><span>ffmpeg</span><span>Next.js</span><span>Kotlin</span></div>
+  </dialog>
+
+  <dialog class="case" id="case-nomady" aria-labelledby="t-nomady">
+    <button class="close" data-close aria-label="Close">✕</button>
+    <header class="case-head bg-mint">
+      <p class="label">Mobile app · 2026 · Nomax</p>
+      <h2 id="t-nomady">Nomady</h2>
+      <p class="tagline">A travel guide for exploring Mongolia on your own.</p>
+      <div class="case-meta"><span class="status-pill">In development</span><span>iOS, Android and web from one codebase</span><button class="try-btn" data-open="try-nomady"><i>▶</i>Try the app</button></div>
+    </header>
+    <div class="case-shots phones">
+      <span class="m-phone"><img src="img/nomady-arrival.jpg" alt="Arrival planner" loading="lazy"></span>
+      <span class="m-phone"><img src="img/nomady-discover.jpg" alt="Discover feed" loading="lazy"></span>
+      <span class="m-phone"><img src="img/nomady-map.jpg" alt="Map with clustered places" loading="lazy"></span>
+      <span class="m-phone"><img src="img/nomady-route.jpg" alt="Gobi route map" loading="lazy"></span>
+      <span class="m-phone"><img src="img/nomady-guide.jpg" alt="Turtle Rock guide page" loading="lazy"></span>
+    </div>
+    <div class="case-body">
+      <div>
+        <h4>The problem</h4>
+        <p>Independent travellers often arrive in Mongolia with few plans and information that's hard to trust, like made-up distances, ratings and map pins. In a country this big, that matters.</p>
+        <h4>What I worked on</h4>
+        <p>A map, a discovery feed and sourced route itineraries, an Arrival planner that suggests an outing from your stay, pace and interests, and a private journey recorder that turns your visits into a route story. Everything stays on your phone.</p>
+      </div>
+      <div>
+        <h4>Interesting problems</h4>
+        <ul class="points">
+          <li><b>One map on web and phone.</b> Leaflet runs directly on the web, and on phones inside a locked-down WebView, from the same code.</li>
+          <li><b>Honest content.</b> Research entries are source-cited and never claim prices, safety or exact locations. Missing data is shown as "Not confirmed".</li>
+          <li><b>Shared types</b> between the app and the backend functions, with a check that they stay in sync.</li>
+          <li><b>Offline-first release.</b> One setting turns off accounts and the backend for the first launch.</li>
+        </ul>
+      </div>
+    </div>
+    <dl class="numbers">
+      <div><dt>62</dt><dd>places in Mongolia</dd></div>
+      <div><dt>262</dt><dd>China research entries</dd></div>
+      <div><dt>66</dt><dd>test files</dd></div>
+      <div><dt>8</dt><dd>Edge Functions</dd></div>
+    </dl>
+    <div class="tags"><span>React Native</span><span>Expo</span><span>TypeScript</span><span>Leaflet</span><span>Supabase</span><span>Zod</span></div>
+  </dialog>
+
+
+  <!-- TRY IT: live demos -->
+  <dialog class="try" id="try-aiyda" aria-labelledby="try-aiyda-t">
+    <div class="try-top">
+      <div><p class="label"><span class="live-dot"></span>Live site</p><h3 id="try-aiyda-t">Aiyda.store</h3></div>
+      <p class="try-hint">This is the real store. Search, open a product, switch categories. Nothing is bought unless you sign in and check out.</p>
+      <a class="try-ext" href="https://aiyda.store" target="_blank" rel="noopener">Open in new tab ↗</a>
+      <button class="close" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="try-stage">
+      <div class="try-browser">
+        <div class="try-bar"><i></i><i></i><i></i><span>aiyda.store</span></div>
+        <iframe data-src="https://aiyda.store/" title="Aiyda.store live site" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="try" id="try-kino" aria-labelledby="try-kino-t">
+    <div class="try-top">
+      <div><p class="label"><span class="live-dot"></span>Real app · sample data</p><h3 id="try-kino-t">KinoUzyo</h3></div>
+      <p class="try-hint">The real web app (a September build, from before the KinoUzyo name and Mongolian interface) running on saved sample data. Switch categories, open a title, browse seasons. Playback is off in this demo.</p>
+      <button class="close" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="try-stage dark-stage">
+      <div class="try-browser">
+        <div class="try-bar"><i></i><i></i><i></i><span>kinouzyo.xyz · demo</span></div>
+        <iframe data-src="demos/kinouzyo/home/" title="KinoUzyo demo" loading="lazy"></iframe>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="try" id="try-nomady" aria-labelledby="try-nomady-t">
+    <div class="try-top">
+      <div><p class="label"><span class="live-dot"></span>Real app · web build</p><h3 id="try-nomady-t">Nomady</h3></div>
+      <p class="try-hint">The actual app, running offline in your browser. Drag the map, open Turtle Rock, browse routes, or plan an outing in Arrival.</p>
+      <button class="close" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="try-stage phone-stage">
+      <div class="try-phone">
+        <iframe data-src="demos/nomady/" title="Nomady app demo" loading="lazy"></iframe>
+      </div>
+      <ul class="try-tips">
+        <li><b>Map</b> Clusters split as you zoom in.</li>
+        <li><b>Routes</b> Itineraries drawn as route maps.</li>
+        <li><b>Place pages</b> Missing details say "Not confirmed".</li>
+        <li><b>Tab bar</b> Animated, with spring motion.</li>
+      </ul>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
